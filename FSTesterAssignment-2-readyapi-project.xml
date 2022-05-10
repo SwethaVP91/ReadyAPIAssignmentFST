@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="67be20db-6c71-42a9-bb1e-222695fdb7da" created="3.30.0" activeEnvironment="Default environment" name="FSTesterAssignment-2" resourceRoot="" updated="3.30.0 2022-03-16T13:04:41Z" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="67be20db-6c71-42a9-bb1e-222695fdb7da" created="3.30.0" activeEnvironment="Default environment" name="FSTesterAssignment-2" resourceRoot="" updated="3.30.0 2022-03-16T13:04:41Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:interface xsi:type="con:RestService" id="fd92f928-eefe-4a57-924e-abb67611bafa" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://petstore.swagger.io" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
@@ -56,6 +56,7 @@
 }</con:request>
             <con:originalUri>https://petstore.swagger.io/v2/user/username</con:originalUri>
             <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -97,6 +98,7 @@
             <con:request/>
             <con:originalUri>https://petstore.swagger.io/v2/user/TestTest</con:originalUri>
             <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -131,6 +133,7 @@
             <con:endpoint>https://petstore.swagger.io</con:endpoint>
             <con:request/>
             <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -173,6 +176,7 @@
             <con:request/>
             <con:originalUri>https://petstore.swagger.io/v2/user/login</con:originalUri>
             <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -223,6 +227,7 @@
 }</con:request>
           <con:originalUri>https://petstore.swagger.io/v2/user</con:originalUri>
           <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
           <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -256,6 +261,7 @@
           <con:request/>
           <con:originalUri>https://petstore.swagger.io/user/logout</con:originalUri>
           <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
           <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
@@ -275,7 +281,7 @@
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Excel">
             <con:configuration>
-              <file>C:/Users/003BQB744/Desktop/Swetha/Learn/FSTester/DataSourceAssignment.xlsx</file>
+              <file>C:/Users/003BQB744/Desktop/Swetha/Learn/FSTester/ReadyAPIAssignment/DataSourceAssignment.xlsx</file>
               <worksheet>TestData1</worksheet>
               <cell>A2</cell>
               <ignoreEmpty>false</ignoreEmpty>
@@ -387,6 +393,12 @@
   "firstName": "${Data Source#modifyfirstname}"
 }</con:request>
             <con:originalUri>https://petstore.swagger.io/v2/user/username</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="9fa87aba-2250-4aaa-b41f-bd28afec6775" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
             <con:credentials>
               <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
@@ -408,6 +420,12 @@
             <con:endpoint>https://petstore.swagger.io</con:endpoint>
             <con:request/>
             <con:originalUri>https://petstore.swagger.io/v2/user/login</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="f9930b6d-ac91-4f5c-97c5-7b5c35aae341" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
             <con:credentials>
               <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
@@ -434,6 +452,12 @@
             <con:endpoint>https://petstore.swagger.io</con:endpoint>
             <con:request/>
             <con:originalUri>https://petstore.swagger.io/user/logout</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="936ec20b-4726-426a-b5aa-ae3b6d09d41c" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
             <con:credentials>
               <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
@@ -453,6 +477,12 @@
             <con:endpoint>https://petstore.swagger.io</con:endpoint>
             <con:request/>
             <con:originalUri>https://petstore.swagger.io/v2/user/TestTest</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="bd61c676-1c51-4b08-972b-cc7e191cd1f3" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
             <con:credentials>
               <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
               <con:authType>No Authorization</con:authType>
@@ -470,7 +500,7 @@
           <con:dataSink type="Excel">
             <con:configuration>
               <file/>
-              <outfile>C:/Users/003BQB744/Desktop/Swetha/Learn/FSTester/DataSourceAssignment.xlsx</outfile>
+              <outfile>C:/Users/003BQB744/Desktop/Swetha/Learn/FSTester/ReadyAPIAssignment/DataSourceAssignment.xlsx</outfile>
               <worksheet>Response</worksheet>
               <cell>A2</cell>
               <evaluateFormulas>false</evaluateFormulas>
